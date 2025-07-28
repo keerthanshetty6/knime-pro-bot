@@ -32,7 +32,7 @@ client.on('guildMemberAdd', async (member) => {
     if (role) {
       await member.roles.add(role);
       console.log(`🎉 Assigned ${config.accessRole} to ${member.user.tag}`);
-      await member.send(`Welcome! You've been granted access to **#knime-pro-early-access**\n\n` + `👉 [Click here to go directly to the channel](https://discord.com/channels/1047506504900677662/1397681354690400406)`);
+      await member.send(`Welcome! You've been granted access to **#knime-pro-early-access**\n\n👉 [Click here to go directly to the channel](https://discord.com/channels/1047506504900677662/1397681354690400406)`);
     }
   }
 
@@ -40,4 +40,6 @@ client.on('guildMemberAdd', async (member) => {
   newInvites.forEach(inv => inviteCache.set(inv.code, inv.uses));
 });
 
+// ✅ Log token length before login
+console.log(`Token Length: ${config.token?.length}`);
 client.login(config.token);
