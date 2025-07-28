@@ -1,0 +1,6 @@
+{
+  "token": "${BOT_TOKEN}",
+  "guildId": "${GUILD_ID}",
+  "targetInviteCode": "${INVITE_CODE}",
+  "accessRole": "knime-pro"
+}
