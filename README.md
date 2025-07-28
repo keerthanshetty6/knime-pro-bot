@@ -1,4 +1,3 @@
-````markdown
 # 🤖 knime-pro-bot
 
 A Discord bot that assigns access to the private `#knime-pro-early-access` channel based on the invite used to join the KNIME Community server.
@@ -44,7 +43,6 @@ Install dependencies:
 
 ```bash
 npm install
-````
 
 Run the bot:
 
