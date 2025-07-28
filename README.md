@@ -1,13 +1,13 @@
 # 🤖 knime-pro-bot
 
-A Discord bot that assigns access to the private `#knime-pro-early-access` channel based on the invite used to join the KNIME Community server.
+A Discord bot that assigns access to the private channel based on the invite used to join server.
 
 ---
 
 ## ✨ Features
 
 - Tracks which invite a new member used
-- Automatically assigns the `knime-pro` role if the correct invite was used
+- Automatically assigns a role if the correct invite was used
 - Sends a welcome message with a link to the private channel
 
 ---
