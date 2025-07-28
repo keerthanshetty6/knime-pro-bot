@@ -1,5 +1,10 @@
 const { Client, GatewayIntentBits } = require('discord.js');
-const config = require('./config.json');
+const config = {
+  token: process.env.BOT_TOKEN,
+  guildId: process.env.GUILD_ID,
+  targetInviteCode: process.env.INVITE_CODE,
+  accessRole: 'knime-pro'
+};
 
 const client = new Client({
   intents: [
@@ -22,12 +27,12 @@ client.on('guildMemberAdd', async (member) => {
   const newInvites = await member.guild.invites.fetch();
   const usedInvite = newInvites.find(inv => inviteCache.get(inv.code) < inv.uses);
 
-  if (usedInvite && usedInvite.code === config.targetInviteCode) {
+  if (usedInvite && usedInvite.code.toLowerCase() === config.targetInviteCode.toLowerCase()) {
     const role = member.guild.roles.cache.find(r => r.name === config.accessRole);
     if (role) {
       await member.roles.add(role);
       console.log(`🎉 Assigned ${config.accessRole} to ${member.user.tag}`);
-      await member.send(`Welcome! You've been granted access to **#knime-pro-beta**.`);
+      await member.send(`Welcome! You've been granted access to **#knime-pro-early-access**\n\n` + `👉 [Click here to go directly to the channel](https://discord.com/channels/1047506504900677662/1397681354690400406)`);
     }
   }
 
