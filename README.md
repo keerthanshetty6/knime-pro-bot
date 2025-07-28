@@ -67,19 +67,6 @@ pm2 start index.js --name knime-pro-bot
 └── README.md        # You're here
 ```
 
----
-
-## 📬 Welcome Message
-
-Users who join using the invite will get:
-
-```
-Welcome! You've been granted access to **#knime-pro-early-access**
-
-👉 [Click here to go directly to the channel](https://discord.com/channels/1047506504900677662/1397681354690400406)
-```
-
----
 
 ## 📌 Notes
 
@@ -93,9 +80,4 @@ Welcome! You've been granted access to **#knime-pro-early-access**
 
 ISC License
 
-```
-
----
-
-Let me know if you'd like a `.env` template too!
 ```
